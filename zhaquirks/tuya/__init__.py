@@ -1249,7 +1249,7 @@ class TuyaWindowCoverControl(LocalDataCluster, WindowCovering):
                 TUYA_SET_DATA, tuya_payload, expect_reply=True
             )
         else:
-            _LOGGER.debug("Unrecognised command: %x", command_id)
+            _LOGGER.error("Unrecognised command: %x", command_id)
             return foundation.Status.UNSUP_CLUSTER_COMMAND
 
 
